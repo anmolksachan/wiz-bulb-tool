@@ -1,5 +1,7 @@
 # WiZ Bulb Tool
 
+> **For authorized security research and educational use only. Only run against devices you own or have explicit permission to test. See [SECURITY.md](SECURITY.md).**
+
 > Scanner · Auditor · Intel · Controller for WiZ smart bulbs on your local network.
 
 Built during a home network security audit — discovered that WiZ bulbs expose a completely unauthenticated local UDP API, allowing anyone on the same Wi-Fi to read state, control the bulb, and extract account-linked identifiers. No credentials. No pairing. No knock.
