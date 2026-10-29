@@ -1,5 +1,9 @@
 # WiZ Bulb Tool
 
+<p align="center">
+  <img src="banner.svg" alt="wiz-bulb-tool banner" width="860"/>
+</p>
+
 > **For authorized security research and educational use only. Only run against devices you own or have explicit permission to test. See [SECURITY.md](SECURITY.md).**
 
 > Scanner · Auditor · Intel · Controller for WiZ smart bulbs on your local network.

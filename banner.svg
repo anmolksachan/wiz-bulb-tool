@@ -1,0 +1,300 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 200" width="860" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+
+    <radialGradient id="bulbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#f9c74f" stop-opacity="0.9"/>
+      <stop offset="55%"  stop-color="#f9c74f" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f9c74f" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bulbGlowRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#ff4444" stop-opacity="0.9"/>
+      <stop offset="55%"  stop-color="#ff4444" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff4444" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bulbGlowCyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00ffcc" stop-opacity="0.9"/>
+      <stop offset="55%"  stop-color="#00ffcc" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#00ffcc" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#f9c74f"/>
+      <stop offset="50%"  stop-color="#fffde7"/>
+      <stop offset="100%" stop-color="#f9c74f"/>
+    </linearGradient>
+
+    <linearGradient id="divLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#30363d" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#30363d" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#30363d" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="glow2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="clip">
+      <rect x="1" y="1" width="858" height="198" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="200" rx="13" fill="url(#bg)"/>
+
+  <!-- Dot grid -->
+  <g clip-path="url(#clip)" opacity="0.05" fill="#58a6ff">
+    <circle cx="50"  cy="30"  r="1"/><circle cx="110" cy="30"  r="1"/><circle cx="170" cy="30"  r="1"/>
+    <circle cx="230" cy="30"  r="1"/><circle cx="290" cy="30"  r="1"/><circle cx="350" cy="30"  r="1"/>
+    <circle cx="410" cy="30"  r="1"/><circle cx="470" cy="30"  r="1"/><circle cx="530" cy="30"  r="1"/>
+    <circle cx="590" cy="30"  r="1"/><circle cx="650" cy="30"  r="1"/><circle cx="710" cy="30"  r="1"/>
+    <circle cx="770" cy="30"  r="1"/><circle cx="830" cy="30"  r="1"/>
+    <circle cx="50"  cy="80"  r="1"/><circle cx="110" cy="80"  r="1"/><circle cx="170" cy="80"  r="1"/>
+    <circle cx="230" cy="80"  r="1"/><circle cx="290" cy="80"  r="1"/><circle cx="350" cy="80"  r="1"/>
+    <circle cx="410" cy="80"  r="1"/><circle cx="470" cy="80"  r="1"/><circle cx="530" cy="80"  r="1"/>
+    <circle cx="590" cy="80"  r="1"/><circle cx="650" cy="80"  r="1"/><circle cx="710" cy="80"  r="1"/>
+    <circle cx="770" cy="80"  r="1"/><circle cx="830" cy="80"  r="1"/>
+    <circle cx="50"  cy="130" r="1"/><circle cx="110" cy="130" r="1"/><circle cx="170" cy="130" r="1"/>
+    <circle cx="230" cy="130" r="1"/><circle cx="290" cy="130" r="1"/><circle cx="350" cy="130" r="1"/>
+    <circle cx="410" cy="130" r="1"/><circle cx="470" cy="130" r="1"/><circle cx="530" cy="130" r="1"/>
+    <circle cx="590" cy="130" r="1"/><circle cx="650" cy="130" r="1"/><circle cx="710" cy="130" r="1"/>
+    <circle cx="770" cy="130" r="1"/><circle cx="830" cy="130" r="1"/>
+    <circle cx="50"  cy="176" r="1"/><circle cx="110" cy="176" r="1"/><circle cx="170" cy="176" r="1"/>
+    <circle cx="230" cy="176" r="1"/><circle cx="290" cy="176" r="1"/><circle cx="350" cy="176" r="1"/>
+    <circle cx="410" cy="176" r="1"/><circle cx="470" cy="176" r="1"/><circle cx="530" cy="176" r="1"/>
+    <circle cx="590" cy="176" r="1"/><circle cx="650" cy="176" r="1"/><circle cx="710" cy="176" r="1"/>
+    <circle cx="770" cy="176" r="1"/><circle cx="830" cy="176" r="1"/>
+  </g>
+
+  <!-- ═══════════════════════════════════
+       LEFT PANEL — WiZ Bulb Visualization
+       Bulb center: (145, 88)
+       ═══════════════════════════════════ -->
+
+  <!-- Outer corona pulse (yellow → red cycle) -->
+  <ellipse cx="145" cy="88" rx="0" ry="0" fill="url(#bulbGlow)" clip-path="url(#clip)">
+    <animate attributeName="rx" values="0;72;0"  dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="0;72;0"  dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.7;0" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Offset red pulse (simulates color-change attack) -->
+  <ellipse cx="145" cy="88" rx="0" ry="0" fill="url(#bulbGlowRed)" clip-path="url(#clip)">
+    <animate attributeName="rx" values="0;55;0"  dur="3s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="0;55;0"  dur="3s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.5;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </ellipse>
+  <!-- Cyan pulse (scan) -->
+  <ellipse cx="145" cy="88" rx="0" ry="0" fill="url(#bulbGlowCyan)" clip-path="url(#clip)">
+    <animate attributeName="rx" values="0;45;0"  dur="3s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="0;45;0"  dur="3s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0.4;0" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Light rays (8 spokes) -->
+  <g transform="translate(145,88)" stroke-linecap="round">
+    <!-- 0° -->
+    <line x1="46" y1="0" x2="62" y2="0" stroke="#f9c74f" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="0s"    repeatCount="indefinite"/>
+    </line>
+    <!-- 45° -->
+    <line x1="32" y1="-32" x2="44" y2="-44" stroke="#f9c74f" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="0.37s" repeatCount="indefinite"/>
+    </line>
+    <!-- 90° -->
+    <line x1="0" y1="-46" x2="0" y2="-62" stroke="#f9c74f" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="0.75s" repeatCount="indefinite"/>
+    </line>
+    <!-- 135° -->
+    <line x1="-32" y1="-32" x2="-44" y2="-44" stroke="#f9c74f" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="1.12s" repeatCount="indefinite"/>
+    </line>
+    <!-- 180° -->
+    <line x1="-46" y1="0" x2="-62" y2="0" stroke="#f9c74f" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="1.5s"  repeatCount="indefinite"/>
+    </line>
+    <!-- 225° -->
+    <line x1="-32" y1="32" x2="-44" y2="44" stroke="#f9c74f" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="1.87s" repeatCount="indefinite"/>
+    </line>
+    <!-- 270° -->
+    <line x1="0" y1="46" x2="0" y2="62" stroke="#f9c74f" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="2.25s" repeatCount="indefinite"/>
+    </line>
+    <!-- 315° -->
+    <line x1="32" y1="32" x2="44" y2="44" stroke="#f9c74f" stroke-width="1.5">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" begin="2.62s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Bulb glass body -->
+  <circle cx="145" cy="88" r="40" fill="#0f1923" stroke="#f9c74f" stroke-width="1.8" filter="url(#glow)">
+    <animate attributeName="stroke"
+             values="#f9c74f;#ff4444;#00ffcc;#f9c74f"
+             dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Inner bulb fill — warm center light -->
+  <circle cx="145" cy="88" r="28" fill="#f9c74f" opacity="0.08">
+    <animate attributeName="opacity" values="0.05;0.2;0.05" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="fill"
+             values="#f9c74f;#ff4444;#00ffcc;#f9c74f"
+             dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Filament -->
+  <g transform="translate(145,88)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-10,10 L-10,-5 L0,-14 L10,-5 L10,10" fill="none" stroke="#f9c74f" stroke-width="1.8" opacity="0.9" filter="url(#softglow)">
+      <animate attributeName="stroke"
+               values="#f9c74f;#ff8844;#00ffcc;#f9c74f"
+               dur="6s" repeatCount="indefinite"/>
+    </path>
+    <line x1="-10" y1="10" x2="10" y2="10" stroke="#888" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- Bulb base (socket) -->
+  <rect x="130" y="126" width="30" height="9" rx="2" fill="#21262d" stroke="#444d56" stroke-width="1"/>
+  <rect x="132" y="135" width="26" height="7" rx="2" fill="#21262d" stroke="#444d56" stroke-width="1"/>
+  <rect x="134" y="142" width="22" height="6" rx="2" fill="#21262d" stroke="#444d56" stroke-width="1"/>
+
+  <!-- UDP label below bulb -->
+  <text x="145" y="164"
+        text-anchor="middle"
+        font-family="monospace" font-size="10" fill="#444d56" letter-spacing="1">UDP · 38899</text>
+
+  <!-- Animated UDP packet labels flying into bulb -->
+  <!-- "setPilot" from right -->
+  <g opacity="0" clip-path="url(#clip)">
+    <text font-family="monospace" font-size="9" fill="#00ffcc">
+      setPilot
+      <animateTransform attributeName="transform" type="translate"
+        values="260,75; 195,82" dur="1.6s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.5;1" dur="1.6s" begin="0s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  <!-- "getPilot" from top -->
+  <g opacity="0" clip-path="url(#clip)">
+    <text font-family="monospace" font-size="9" fill="#f9c74f">
+      getPilot
+      <animateTransform attributeName="transform" type="translate"
+        values="110,25; 118,50" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.5;1" dur="1.8s" begin="0.6s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  <!-- "getSystemConfig" from left -->
+  <g opacity="0" clip-path="url(#clip)">
+    <text font-family="monospace" font-size="9" fill="#ff6b6b">
+      getSystemConfig
+      <animateTransform attributeName="transform" type="translate"
+        values="15,100; 80,92" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0" keyTimes="0;0.5;1" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="220" y1="18" x2="220" y2="182" stroke="#21262d" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════
+       RIGHT PANEL (x: 230–860, center 545)
+       ═══════════════════════════════════ -->
+
+  <!-- Title -->
+  <text x="545" y="80"
+        text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="44" font-weight="bold"
+        fill="url(#titleGrad)"
+        filter="url(#glow2)"
+        letter-spacing="1">
+    wiz-bulb-tool
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Subtitle -->
+  <text x="545" y="106"
+        text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="12.5" fill="#8b949e" letter-spacing="0.5">
+    Scanner · Auditor · Intel · Controller  ·  no credentials required
+  </text>
+
+  <!-- Divider -->
+  <line x1="250" y1="118" x2="840" y2="118" stroke="url(#divLine)" stroke-width="0.8"/>
+
+  <!-- Feature pills (4 pills)
+       Width: Scanner=82 Auditor=78 Intel=62 Controller=96
+       Total = 318 + gaps 3×14=42 = 360
+       Start = 230 + (630-360)/2 = 230+135 = 365 -->
+
+  <!-- Scanner -->
+  <rect x="365" y="130" width="82" height="22" rx="5"
+        fill="#00ffcc" fill-opacity="0.07" stroke="#00ffcc" stroke-width="1" stroke-opacity="0.5">
+    <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2.8s" begin="0s" repeatCount="indefinite"/>
+    <animate attributeName="fill-opacity"   values="0.04;0.16;0.04" dur="2.8s" begin="0s" repeatCount="indefinite"/>
+  </rect>
+  <text x="406" y="145" text-anchor="middle"
+        font-family="monospace" font-size="11" fill="#00ffcc" font-weight="bold">SCANNER</text>
+
+  <!-- Auditor -->
+  <rect x="461" y="130" width="78" height="22" rx="5"
+        fill="#ff6b6b" fill-opacity="0.07" stroke="#ff6b6b" stroke-width="1" stroke-opacity="0.5">
+    <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2.8s" begin="0.7s" repeatCount="indefinite"/>
+    <animate attributeName="fill-opacity"   values="0.04;0.16;0.04" dur="2.8s" begin="0.7s" repeatCount="indefinite"/>
+  </rect>
+  <text x="500" y="145" text-anchor="middle"
+        font-family="monospace" font-size="11" fill="#ff6b6b" font-weight="bold">AUDITOR</text>
+
+  <!-- Intel -->
+  <rect x="553" y="130" width="62" height="22" rx="5"
+        fill="#c77dff" fill-opacity="0.07" stroke="#c77dff" stroke-width="1" stroke-opacity="0.5">
+    <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+    <animate attributeName="fill-opacity"   values="0.04;0.16;0.04" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="584" y="145" text-anchor="middle"
+        font-family="monospace" font-size="11" fill="#c77dff" font-weight="bold">INTEL</text>
+
+  <!-- Controller -->
+  <rect x="629" y="130" width="96" height="22" rx="5"
+        fill="#f9c74f" fill-opacity="0.07" stroke="#f9c74f" stroke-width="1" stroke-opacity="0.5">
+    <animate attributeName="stroke-opacity" values="0.3;0.9;0.3" dur="2.8s" begin="2.1s" repeatCount="indefinite"/>
+    <animate attributeName="fill-opacity"   values="0.04;0.16;0.04" dur="2.8s" begin="2.1s" repeatCount="indefinite"/>
+  </rect>
+  <text x="677" y="145" text-anchor="middle"
+        font-family="monospace" font-size="11" fill="#f9c74f" font-weight="bold">CONTROLLER</text>
+
+  <!-- Bottom info row -->
+  <text x="545" y="174"
+        text-anchor="middle"
+        font-family="monospace" font-size="10.5">
+    <tspan fill="#58a6ff">@FR13ND0x7F</tspan>
+    <tspan fill="#30363d">  ·  </tspan>
+    <tspan fill="#f9c74f" opacity="0.75">CVE-2019-18980</tspan>
+    <tspan fill="#30363d">  ·  </tspan>
+    <tspan fill="#444d56">ESP25_SHRGB_01</tspan>
+    <tspan fill="#30363d">  ·  </tspan>
+    <tspan fill="#444d56">extends Signify research</tspan>
+  </text>
+
+  <!-- Outer border -->
+  <rect x="1" y="1" width="858" height="198" rx="12"
+        fill="none" stroke="#21262d" stroke-width="1.5"/>
+
+  <!-- Corner brackets (WiZ gold) -->
+  <polyline points="1,28 1,1 28,1"       fill="none" stroke="#f9c74f" stroke-width="1.8" stroke-opacity="0.7"/>
+  <polyline points="832,1 859,1 859,28"   fill="none" stroke="#f9c74f" stroke-width="1.8" stroke-opacity="0.7"/>
+  <polyline points="1,172 1,199 28,199"   fill="none" stroke="#f9c74f" stroke-width="1.8" stroke-opacity="0.7"/>
+  <polyline points="832,199 859,199 859,172" fill="none" stroke="#f9c74f" stroke-width="1.8" stroke-opacity="0.7"/>
+</svg>
