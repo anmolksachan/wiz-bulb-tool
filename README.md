@@ -145,9 +145,9 @@ Bulbs periodically broadcast registration packets to `255.255.255.255:38899`:
   "method": "registration",
   "params": {
     "register": true,
-    "phoneMac": "721874010735",
+    "phoneMac": "112233445566",
     "phoneIp": "192.168.1.x",
-    "homeId": 21072443
+    "homeId": 12345678
   }
 }
 ```
